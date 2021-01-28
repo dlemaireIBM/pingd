@@ -7,6 +7,6 @@
       "{{ (ansible_facts['os_family'] != 'Windows') | ternary('pingd', 'win_ping') }}"
     register: tictac
 
-   - name: debug
-     debug:
-       var: tictac
+  - name: debug
+    debug:
+      var: tictac

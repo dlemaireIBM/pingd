@@ -1,0 +1,10 @@
+- hosts: IC
+  tasks:
+    - import_role:
+        name: "dlemaireibm.pingd.pingd"
+
+    - dlemaireibm.pingd.pingd:
+      register: tictac
+
+    - debug:
+        var: tictac
