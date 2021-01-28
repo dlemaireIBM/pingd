@@ -1,0 +1,8 @@
+---
+- hosts: IC
+  gather_facts: yes
+  become: no
+  tasks:
+    - name: galaxy test role with pingDL custom module based on a fork of ansible ping
+      include_role: 
+        name: pingd

@@ -1,0 +1,8 @@
+---
+# tasks file for pingDL
+#
+
+  - name: inovation
+    action:
+      "{{ (ansible_facts['os_family'] != 'Windows') | ternary('pingDL', 'win_ping') }}"
+
